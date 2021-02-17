@@ -1,6 +1,6 @@
 import UIKit
 
-class SearchViewController: BaseViewController {
+final class SearchViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

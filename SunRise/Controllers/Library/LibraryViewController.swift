@@ -1,11 +1,14 @@
 import UIKit
 
-class LibraryViewController: BaseViewController {
+final class LibraryViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.title = "Library"
+        
     }
     
+    override func setupUI() {
+        self.navigationItem.title = "Library"
+    }
 
 }

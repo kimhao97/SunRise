@@ -34,20 +34,10 @@ class SceneDelegate: UIResponder,
         searchNavi.navigationBar.barTintColor = .black
         
         tabBarController.viewControllers = [homeNavi, libraryNavi, searchNavi]
-        tabBarController.tabBar.tintColor = .white
+        tabBarController.tabBar.tintColor = UIColor(named: "TabBar_Tint")
         tabBarController.tabBar.isTranslucent = false
-        tabBarController.tabBar.barTintColor = UIColor(hex: "#1C2329FF")
+        tabBarController.tabBar.barTintColor = UIColor(named: "TabBar_Background")
         
         window?.rootViewController = tabBarController
     }
-    
-    func sceneDidDisconnect(_ scene: UIScene) {}
-
-    func sceneDidBecomeActive(_ scene: UIScene) {}
-
-    func sceneWillResignActive(_ scene: UIScene) {}
-
-    func sceneWillEnterForeground(_ scene: UIScene) {}
-
-    func sceneDidEnterBackground(_ scene: UIScene) {}
 }
