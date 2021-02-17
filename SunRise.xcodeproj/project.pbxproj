@@ -9,25 +9,33 @@
 /* Begin PBXBuildFile section */
 		33502DF125CD4B9E00D20B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF025CD4B9E00D20B10 /* AppDelegate.swift */; };
 		33502DF325CD4B9E00D20B10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */; };
-		33502DF525CD4B9E00D20B10 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF425CD4B9E00D20B10 /* ViewController.swift */; };
-		33502DF825CD4B9E00D20B10 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33502DF625CD4B9E00D20B10 /* Main.storyboard */; };
 		33502DFA25CD4BA000D20B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33502DF925CD4BA000D20B10 /* Assets.xcassets */; };
 		33502DFD25CD4BA000D20B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33502DFB25CD4BA000D20B10 /* LaunchScreen.storyboard */; };
-		BABB59C62B9614FAD162A32F /* Pods_SunRise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F199C361CA666EB20C6A7174 /* Pods_SunRise.framework */; };
+		3373A17325D0D9C00066AB54 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3373A17125D0D9C00066AB54 /* LibraryViewController.swift */; };
+		3373A17425D0D9C00066AB54 /* LibraryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3373A17225D0D9C00066AB54 /* LibraryViewController.xib */; };
+		33BAF00F25D0D4570073B31F /* BaseView Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAF00E25D0D4570073B31F /* BaseView Controller.swift */; };
+		33BAF01325D0D46F0073B31F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAF01125D0D46F0073B31F /* HomeViewController.swift */; };
+		33BAF01425D0D46F0073B31F /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BAF01225D0D46F0073B31F /* HomeViewController.xib */; };
+		33BAF01D25D0D4A60073B31F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAF01B25D0D4A60073B31F /* SearchViewController.swift */; };
+		33BAF01E25D0D4A60073B31F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BAF01C25D0D4A60073B31F /* SearchViewController.xib */; };
+		33BAF02225D0D4D10073B31F /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAF02125D0D4D10073B31F /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		33502DED25CD4B9E00D20B10 /* SunRise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunRise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33502DF025CD4B9E00D20B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		33502DF425CD4B9E00D20B10 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		33502DF725CD4B9E00D20B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33502DF925CD4BA000D20B10 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33502DFC25CD4BA000D20B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33502DFE25CD4BA000D20B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		35256A5DC197C5A39D27FA4A /* Pods-SunRise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunRise.debug.xcconfig"; path = "Target Support Files/Pods-SunRise/Pods-SunRise.debug.xcconfig"; sourceTree = "<group>"; };
-		7166FF2D3A9B662C5D548B1D /* Pods-SunRise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SunRise.release.xcconfig"; path = "Target Support Files/Pods-SunRise/Pods-SunRise.release.xcconfig"; sourceTree = "<group>"; };
-		F199C361CA666EB20C6A7174 /* Pods_SunRise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SunRise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3373A17125D0D9C00066AB54 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		3373A17225D0D9C00066AB54 /* LibraryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LibraryViewController.xib; sourceTree = "<group>"; };
+		33BAF00E25D0D4570073B31F /* BaseView Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseView Controller.swift"; sourceTree = "<group>"; };
+		33BAF01125D0D46F0073B31F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		33BAF01225D0D46F0073B31F /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		33BAF01B25D0D4A60073B31F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		33BAF01C25D0D4A60073B31F /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		33BAF02125D0D4D10073B31F /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABB59C62B9614FAD162A32F /* Pods_SunRise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +54,6 @@
 			children = (
 				33502DEF25CD4B9E00D20B10 /* SunRise */,
 				33502DEE25CD4B9E00D20B10 /* Products */,
-				60ABEF5E01CCF0282BA72C39 /* Pods */,
-				5E7035D8CBFE5BD8D6A5C0EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,33 +68,93 @@
 		33502DEF25CD4B9E00D20B10 /* SunRise */ = {
 			isa = PBXGroup;
 			children = (
-				33502DF025CD4B9E00D20B10 /* AppDelegate.swift */,
-				33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */,
-				33502DF425CD4B9E00D20B10 /* ViewController.swift */,
-				33502DF625CD4B9E00D20B10 /* Main.storyboard */,
-				33502DF925CD4BA000D20B10 /* Assets.xcassets */,
-				33502DFB25CD4BA000D20B10 /* LaunchScreen.storyboard */,
+				33BAF02425D0D4E70073B31F /* Resources */,
+				335F461425CFEF3F007D1BC8 /* AppDelegates */,
+				335F461225CFEF30007D1BC8 /* Controllers */,
+				33BAF02025D0D4B80073B31F /* Extensions */,
 				33502DFE25CD4BA000D20B10 /* Info.plist */,
+				335F461325CFEF39007D1BC8 /* Models */,
 			);
 			path = SunRise;
 			sourceTree = "<group>";
 		};
-		5E7035D8CBFE5BD8D6A5C0EC /* Frameworks */ = {
+		335F461225CFEF30007D1BC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				F199C361CA666EB20C6A7174 /* Pods_SunRise.framework */,
+				33BAF00D25D0D43F0073B31F /* Base */,
+				335F461525CFEF4C007D1BC8 /* Home */,
+				33BAF00C25D0D41D0073B31F /* Library */,
+				33BAF00B25D0D4030073B31F /* Search */,
 			);
-			name = Frameworks;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		60ABEF5E01CCF0282BA72C39 /* Pods */ = {
+		335F461325CFEF39007D1BC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				35256A5DC197C5A39D27FA4A /* Pods-SunRise.debug.xcconfig */,
-				7166FF2D3A9B662C5D548B1D /* Pods-SunRise.release.xcconfig */,
 			);
-			name = Pods;
-			path = Pods;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		335F461425CFEF3F007D1BC8 /* AppDelegates */ = {
+			isa = PBXGroup;
+			children = (
+				33502DF025CD4B9E00D20B10 /* AppDelegate.swift */,
+				33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */,
+			);
+			path = AppDelegates;
+			sourceTree = "<group>";
+		};
+		335F461525CFEF4C007D1BC8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				33BAF01125D0D46F0073B31F /* HomeViewController.swift */,
+				33BAF01225D0D46F0073B31F /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		33BAF00B25D0D4030073B31F /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				33BAF01B25D0D4A60073B31F /* SearchViewController.swift */,
+				33BAF01C25D0D4A60073B31F /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		33BAF00C25D0D41D0073B31F /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				3373A17125D0D9C00066AB54 /* LibraryViewController.swift */,
+				3373A17225D0D9C00066AB54 /* LibraryViewController.xib */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		33BAF00D25D0D43F0073B31F /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				33BAF00E25D0D4570073B31F /* BaseView Controller.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		33BAF02025D0D4B80073B31F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				33BAF02125D0D4D10073B31F /* UIColor+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		33BAF02425D0D4E70073B31F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				33502DF925CD4BA000D20B10 /* Assets.xcassets */,
+				33502DFB25CD4BA000D20B10 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -99,7 +164,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 33502E0125CD4BA000D20B10 /* Build configuration list for PBXNativeTarget "SunRise" */;
 			buildPhases = (
-				1DF9E6594215A9D62D1F40AE /* [CP] Check Pods Manifest.lock */,
 				33502DE925CD4B9E00D20B10 /* Sources */,
 				33502DEA25CD4B9E00D20B10 /* Frameworks */,
 				33502DEB25CD4B9E00D20B10 /* Resources */,
@@ -151,60 +215,33 @@
 			buildActionMask = 2147483647;
 			files = (
 				33502DFD25CD4BA000D20B10 /* LaunchScreen.storyboard in Resources */,
+				3373A17425D0D9C00066AB54 /* LibraryViewController.xib in Resources */,
 				33502DFA25CD4BA000D20B10 /* Assets.xcassets in Resources */,
-				33502DF825CD4B9E00D20B10 /* Main.storyboard in Resources */,
+				33BAF01E25D0D4A60073B31F /* SearchViewController.xib in Resources */,
+				33BAF01425D0D46F0073B31F /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1DF9E6594215A9D62D1F40AE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SunRise-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		33502DE925CD4B9E00D20B10 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33502DF525CD4B9E00D20B10 /* ViewController.swift in Sources */,
+				33BAF02225D0D4D10073B31F /* UIColor+Extension.swift in Sources */,
+				33BAF01D25D0D4A60073B31F /* SearchViewController.swift in Sources */,
+				33BAF00F25D0D4570073B31F /* BaseView Controller.swift in Sources */,
 				33502DF125CD4B9E00D20B10 /* AppDelegate.swift in Sources */,
+				3373A17325D0D9C00066AB54 /* LibraryViewController.swift in Sources */,
 				33502DF325CD4B9E00D20B10 /* SceneDelegate.swift in Sources */,
+				33BAF01325D0D46F0073B31F /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		33502DF625CD4B9E00D20B10 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				33502DF725CD4B9E00D20B10 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		33502DFB25CD4BA000D20B10 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -334,7 +371,6 @@
 		};
 		33502E0225CD4BA000D20B10 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35256A5DC197C5A39D27FA4A /* Pods-SunRise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -353,7 +389,6 @@
 		};
 		33502E0325CD4BA000D20B10 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7166FF2D3A9B662C5D548B1D /* Pods-SunRise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
