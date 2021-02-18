@@ -1,43 +1,43 @@
 import Foundation
 import UIKit
 
-final class Track: Codable {
+struct Track: Codable {
 
-    let track_id: Int?
+    let trackID: Int?
     let title: String?
     let genre: String?
-    let stream_url: String?
-    let artwork_url: String?
+    let streamURL: String?
+    let artworkURL: String?
 
-    let user_id: Int
-    let user_name: String
+    let userID: Int
+    let userName: String
 
     enum SongKeys: String, CodingKey {
-        case track_id = "id"
+        case trackID = "id"
         case title
-        case user_name = "user"
+        case userName = "user"
         case genre
-        case stream_url
-        case artwork_url
+        case streamURL = "stream_url"
+        case artworkURL = "artwork_url"
     }
 
     enum UserKeys: String, CodingKey {
-        case user_id = "id"
-        case user_name = "username"
+        case userID = "id"
+        case userName = "username"
     }
 
     init(from decoder: Decoder) throws{
         let container = try decoder.container(keyedBy: SongKeys.self)
 
-        track_id = try container.decode(Int.self, forKey: .track_id)
+        trackID = try container.decode(Int.self, forKey: .trackID)
         title = try container.decode(String.self, forKey: .title)
         genre = try container.decode(String.self, forKey: .genre)
-        stream_url = try container.decode(String.self, forKey: .stream_url)
-        artwork_url = try container.decode(String.self, forKey: .artwork_url)
+        streamURL = try container.decode(String.self, forKey: .streamURL)
+        artworkURL = try container.decode(String.self, forKey: .artworkURL)
 
-        let user = try container.nestedContainer(keyedBy: UserKeys.self, forKey: .user_name)
+        let user = try container.nestedContainer(keyedBy: UserKeys.self, forKey: .userName)
 
-        user_id = try user.decode(Int.self, forKey: .user_id)
-        user_name = try user.decode(String.self, forKey: .user_name)
+        userID = try user.decode(Int.self, forKey: .userID)
+        userName = try user.decode(String.self, forKey: .userName)
     }
 }

@@ -11,7 +11,7 @@ struct APIManager {
         static let user_path = "/users"
         
         static let client_path = "client_id="
-        static let client_id = "7c8ae3eed403b61716254856c4155475"
+        static let client_id = "INSERT YOUR CLIENT ID"
         
     }
     

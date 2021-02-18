@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-final class Playlist: Codable {
+struct Playlist: Codable {
 
     let tracks: [Track]?
 

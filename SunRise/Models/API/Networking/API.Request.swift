@@ -2,7 +2,7 @@ import Foundation
 
 extension API {
     func request(urlString: String, completion: @escaping (APIResult) -> Void) {
-        guard let url = URL(string: urlString)else {
+        guard let url = URL(string: urlString) else {
             completion(.failure(.errorURL))
             return
         }
