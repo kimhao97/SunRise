@@ -8,7 +8,7 @@ extension APIManager.Music {
         var localizedDescription: String {
             switch self {
             case .playlist:
-                return APIManager.Path.base_domain + APIManager.Path.playlists_path + "?" + APIManager.Path.client_path + APIManager.Path.client_id
+                return APIManager.Path.base_domain.localizedDescription + APIManager.Path.playlists_path.localizedDescription + "?" + APIManager.Path.client_path.localizedDescription + APIManager.APIKey.ClientID.localizedDescription
             }
         }
     }

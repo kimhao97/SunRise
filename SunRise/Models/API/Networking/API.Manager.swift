@@ -2,17 +2,25 @@ import Foundation
 
 struct APIManager {
     
-    struct Path {
-        static let base_domain = "http://api.soundcloud.com"
+    enum Path {
+        case base_domain, playlists_path, tracks_path, stream_path, user_path, client_path
         
-        static let playlists_path = "/playlists"
-        static let tracks_path = "/tracks"
-        static let stream_path = "/stream"
-        static let user_path = "/users"
-        
-        static let client_path = "client_id="
-        static let client_id = "INSERT YOUR CLIENT ID"
-        
+        var localizedDescription: String {
+            switch self {
+            case .base_domain:
+                return "http://api.soundcloud.com"
+            case .playlists_path:
+                return "/playlists"
+            case .tracks_path:
+                return"/tracks"
+            case .stream_path:
+                return "/stream"
+            case .user_path:
+                return "/users"
+            case .client_path:
+                return "client_id="
+            }
+        }
     }
     
     struct Music {}
