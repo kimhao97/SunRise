@@ -22,6 +22,8 @@
 		3327EF4825DF535000C74CF5 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF4125DF535000C74CF5 /* API.swift */; };
 		3327EF4925DF535000C74CF5 /* API.Music.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF4225DF535000C74CF5 /* API.Music.swift */; };
 		3327EF4C25DF538900C74CF5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF4B25DF538900C74CF5 /* String+Extension.swift */; };
+		3327EF5525DF6E6000C74CF5 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF5425DF6E6000C74CF5 /* Reusable.swift */; };
+		3327EF5925DF6EB700C74CF5 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF5825DF6EB700C74CF5 /* NibLoadable.swift */; };
 		33502DF125CD4B9E00D20B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF025CD4B9E00D20B10 /* AppDelegate.swift */; };
 		33502DF325CD4B9E00D20B10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */; };
 		33502DFA25CD4BA000D20B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33502DF925CD4BA000D20B10 /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 		3327EF4125DF535000C74CF5 /* API.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
 		3327EF4225DF535000C74CF5 /* API.Music.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = API.Music.swift; sourceTree = "<group>"; };
 		3327EF4B25DF538900C74CF5 /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		3327EF5425DF6E6000C74CF5 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		3327EF5825DF6EB700C74CF5 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		33502DED25CD4B9E00D20B10 /* SunRise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunRise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33502DF025CD4B9E00D20B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		3327EF5325DF6E4F00C74CF5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3327EF5425DF6E6000C74CF5 /* Reusable.swift */,
+				3327EF5825DF6EB700C74CF5 /* NibLoadable.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		33502DE425CD4B9E00D20B10 = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +157,7 @@
 		33502DEF25CD4B9E00D20B10 /* SunRise */ = {
 			isa = PBXGroup;
 			children = (
+				3327EF5325DF6E4F00C74CF5 /* View */,
 				33BAF02425D0D4E70073B31F /* Resources */,
 				335F461425CFEF3F007D1BC8 /* AppDelegates */,
 				335F461225CFEF30007D1BC8 /* Controllers */,
@@ -327,9 +341,11 @@
 				3327EF4C25DF538900C74CF5 /* String+Extension.swift in Sources */,
 				3327EF3225DF533200C74CF5 /* SongCollectionViewCell.swift in Sources */,
 				3327EF4925DF535000C74CF5 /* API.Music.swift in Sources */,
+				3327EF5925DF6EB700C74CF5 /* NibLoadable.swift in Sources */,
 				3327EF3025DF533200C74CF5 /* GenreTableViewCell.swift in Sources */,
 				33502DF325CD4B9E00D20B10 /* SceneDelegate.swift in Sources */,
 				3327EF4425DF535000C74CF5 /* Playlist.swift in Sources */,
+				3327EF5525DF6E6000C74CF5 /* Reusable.swift in Sources */,
 				3327EF4825DF535000C74CF5 /* API.swift in Sources */,
 				3327EF4725DF535000C74CF5 /* API.Manager.swift in Sources */,
 			);

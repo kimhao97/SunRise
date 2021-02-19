@@ -24,14 +24,16 @@ final class HomeViewModel {
         for playlist in playlists {
             if let tracks = playlist.tracks {
                 for track in tracks {
-                    if track.genre != "", let type = track.genre {
-                        if let i = songs.keys.firstIndex(of: type) {
-                            songs.values[i].append(track)
-                            
-                        } else {
-                            tempArray.removeAll()
-                            tempArray.append(track)
-                            songs[type] = tempArray
+                    if let type = track.genre {
+                        if type.isEmpty == false {
+                            if let i = songs.keys.firstIndex(of: type) {
+                                songs.values[i].append(track)
+                                
+                            } else {
+                                tempArray.removeAll()
+                                tempArray.append(track)
+                                songs[type] = tempArray
+                            }
                         }
                     }
                 }

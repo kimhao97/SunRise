@@ -1,16 +1,14 @@
 import UIKit
 
-final class GenreTableViewCell: UITableViewCell {
+final class GenreTableViewCell: UITableViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak private var genreLabel: UILabel!
     @IBOutlet weak private var collectionView: UICollectionView!
     
-    private var tracks = [Track]()
-    
-    static let identifier: String = "GenreTableViewCell"
-    
-    static func nib() -> UINib {
-        return UINib(nibName: "GenreTableViewCell", bundle: nil)
+    private var tracks = [Track]() {
+        didSet {
+            updateUI()
+        }
     }
     
     override func awakeFromNib() {
@@ -18,8 +16,8 @@ final class GenreTableViewCell: UITableViewCell {
         
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
-        self.collectionView.register(SongCollectionViewCell.nib(),
-                                forCellWithReuseIdentifier: SongCollectionViewCell.identifier)
+        self.collectionView.register(SongCollectionViewCell.nib,
+                                forCellWithReuseIdentifier: SongCollectionViewCell.reuseIdentifier)
     }
 
     override func setSelected(_ selected: Bool,
@@ -33,8 +31,6 @@ final class GenreTableViewCell: UITableViewCell {
         
         genreLabel.text = genre
         self.tracks = tracks
-        
-        updateUI()
     }
     
     private func updateUI() {
@@ -64,7 +60,7 @@ extension GenreTableViewCell: UICollectionViewDelegate,
     func collectionView(_ collectionView: UICollectionView,
                     cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SongCollectionViewCell.identifier,
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: SongCollectionViewCell.reuseIdentifier,
                                                        for: indexPath) as? SongCollectionViewCell
         else { return UICollectionViewCell() }
         

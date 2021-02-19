@@ -1,16 +1,10 @@
 import UIKit
 
-final class SongCollectionViewCell: UICollectionViewCell {
+final class SongCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable {
     
     @IBOutlet weak private var songImage: UIImageView!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var userLabel: UILabel!
-    
-    static let identifier: String = "SongCollectionViewCell"
-    
-    static func nib() -> UINib {
-        return UINib(nibName: "SongCollectionViewCell", bundle: nil)
-    }
     
     override func awakeFromNib() {
         super.awakeFromNib()

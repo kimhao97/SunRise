@@ -19,13 +19,13 @@ final class HomeViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(GenreTableViewCell.nib(),
-                        forCellReuseIdentifier: GenreTableViewCell.identifier)
+        tableView.register(GenreTableViewCell.nib,
+                           forCellReuseIdentifier: GenreTableViewCell.reuseIdentifier)
         
-        viewModel.loadAPI() { done in
+        viewModel.loadAPI() { [weak self]done in
             if done {
-                self.viewModel.genreSorted()
-                self.updateUI()
+                self?.viewModel.genreSorted()
+                self?.updateUI()
             }
         }
     }
@@ -50,7 +50,7 @@ extension HomeViewController: UITableViewDelegate,
     func tableView(_ tableView: UITableView,
                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: GenreTableViewCell.identifier,
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: GenreTableViewCell.reuseIdentifier,
                                                   for: indexPath) as? GenreTableViewCell
         else { return UITableViewCell() }
         
