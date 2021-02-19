@@ -15,13 +15,13 @@ final class SongCollectionViewCell: UICollectionViewCell, Reusable, NibLoadable 
         titleLabel.text = track.title
         userLabel.text = track.userName
         
-        track.artworkURL?.downloadImage() { result in
+        track.artworkURL?.downloadImage() { [weak self]result in
             switch result {
             case .failure(_):
                 break
             case .success(let image):
                 if let image = image {
-                    self.songImage.image = image
+                    self?.songImage.image = image
                 }
             }
         }
