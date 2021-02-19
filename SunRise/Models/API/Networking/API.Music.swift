@@ -5,17 +5,19 @@ extension APIManager.Music {
     enum QueryString {
         case playlist
         
-        var localizedDescription: String {
+        var path: String {
             switch self {
             case .playlist:
-                return APIManager.Path.base_domain.localizedDescription + APIManager.Path.playlists_path.localizedDescription + "?" + APIManager.Path.client_path.localizedDescription + APIManager.APIKey.ClientID.localizedDescription
+                return APIManager.APIRouter.playlists_path
+                    + "?"
+                    + APIManager.APIRouter.client_path
             }
         }
     }
     
     static func getPlaylist(completion: @escaping APICompletion<[Playlist]>) {
         
-        let urlString = QueryString.playlist.localizedDescription
+        let urlString = QueryString.playlist.path
         
         API.shared.request(urlString: urlString) { result -> Void in
             switch result {
