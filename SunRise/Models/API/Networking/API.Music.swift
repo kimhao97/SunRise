@@ -3,21 +3,14 @@ import Foundation
 extension APIManager.Music {
     
     enum QueryString {
-        case playlist
-        
-        var path: String {
-            switch self {
-            case .playlist:
-                return APIManager.APIRouter.playlists_path
-                    + "?"
-                    + APIManager.APIRouter.client_path
-            }
-        }
+        static let playlist = APIManager.APIRouter.playlists_path
+                                        + "?"
+                                        + APIManager.APIRouter.client_path
     }
     
     static func getPlaylist(completion: @escaping APICompletion<[Playlist]>) {
         
-        let urlString = QueryString.playlist.path
+        let urlString = QueryString.playlist
         
         API.shared.request(urlString: urlString) { result -> Void in
             switch result {
