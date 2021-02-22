@@ -12,13 +12,13 @@ extension PlayingManagedObject {
         return NSFetchRequest<PlayingManagedObject>(entityName: "Playing")
     }
 
-    @NSManaged public var artwork_url: String?
+    @NSManaged public var artworkURL: String?
     @NSManaged public var genre: String?
     @NSManaged public var id: Int32
-    @NSManaged public var stream_url: String?
+    @NSManaged public var streamURL: String?
     @NSManaged public var title: String?
-    @NSManaged public var user_id: String?
-    @NSManaged public var user_name: String?
+    @NSManaged public var userID: String?
+    @NSManaged public var userName: String?
 
 }
 

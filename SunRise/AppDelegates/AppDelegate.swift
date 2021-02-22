@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let url = FileManager.default.urls(for: .documentDirectory,
-                                      in: .userDomainMask)
+                                           in: .userDomainMask)
         print("URL: \(url[url.count-1] as URL)")
         return true
     }

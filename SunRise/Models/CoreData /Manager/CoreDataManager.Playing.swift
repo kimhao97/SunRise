@@ -11,9 +11,9 @@ extension CoreDataManager.Playing {
             playingMO.id = Int32(track.trackID ?? 0)
             playingMO.title = track.title
             playingMO.genre = track.genre
-            playingMO.artwork_url = track.artworkURL
-            playingMO.stream_url = track.streamURL
-            playingMO.user_name = track.userName
+            playingMO.artworkURL = track.artworkURL
+            playingMO.streamURL = track.streamURL
+            playingMO.userName = track.userName
         
             do {
                 try managedContext.save()
@@ -41,14 +41,19 @@ extension CoreDataManager.Playing {
     
     static func deleteAllObject() {
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+
         let managedContext = appDelegate.persistentContainer.viewContext
-        
-        if let savedItems = fetchData() {
-            for savedItem in savedItems {
-                managedContext.performAndWait {
-                    managedContext.delete(savedItem)
-                }
-            }
+
+        let deleteFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Playing")
+
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: deleteFetch)
+
+        do {
+            try managedContext.execute(deleteRequest)
+            try managedContext.save()
+
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
         }
     }
 }

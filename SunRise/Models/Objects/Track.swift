@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-struct Track: Codable {
+class Track: Codable {
     
     let trackID: Int?
     let title: String?
@@ -26,7 +26,7 @@ struct Track: Codable {
         case userName = "username"
     }
 
-    init(from decoder: Decoder) throws{
+    required init(from decoder: Decoder) throws{
         let container = try decoder.container(keyedBy: SongKeys.self)
 
         trackID = try container.decode(Int.self, forKey: .trackID)

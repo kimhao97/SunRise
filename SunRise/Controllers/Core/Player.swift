@@ -77,7 +77,7 @@ final class Player {
         if let playing = CoreDataManager.Playing.fetchData()?.first {
             
             if streamUrlPlaying() == nil {
-                addSongPlayer(streamUrl: playing.stream_url,
+                addSongPlayer(streamUrl: playing.streamURL,
                               completion: { _ in })
             }
 

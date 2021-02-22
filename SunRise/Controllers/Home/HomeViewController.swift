@@ -42,7 +42,7 @@ final class HomeViewController: BaseViewController {
         
         if let playing = viewModel.fetchTrackPlaying() {
             titleLabel.text = playing.title
-            userTitle.text = playing.user_name
+            userTitle.text = playing.userName
             favoriteButton.isSelected = viewModel.isLiked(with: Int(playing.id))
         }
     }
@@ -59,7 +59,7 @@ final class HomeViewController: BaseViewController {
         
         tableView.reloadData()
         
-        switch Player.shared.state {
+        switch viewModel.player.state {
         case .isPlaying:
             playButton.isSelected = true
         case .stopped:
@@ -68,7 +68,7 @@ final class HomeViewController: BaseViewController {
         
         if let playing = viewModel.fetchTrackPlaying() {
             titleLabel.text = playing.title
-            userTitle.text = playing.user_name
+            userTitle.text = playing.userName
             favoriteButton.isSelected = viewModel.isLiked(with: Int(playing.id))
         }
     }
