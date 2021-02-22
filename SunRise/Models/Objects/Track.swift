@@ -2,15 +2,15 @@ import Foundation
 import UIKit
 
 struct Track: Codable {
-
-    let trackID: Int?
-    let title: String?
-    let genre: String?
-    let streamURL: String?
-    let artworkURL: String?
-
+    
+    var trackID: Int?
+    var title: String?
+    var genre: String?
+    var streamURL: String?
+    var artworkURL: String?
+    
     let userID: Int
-    let userName: String
+    var userName: String
 
     enum SongKeys: String, CodingKey {
         case trackID = "id"
