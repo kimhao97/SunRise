@@ -40,7 +40,7 @@ final class HomeViewController: BaseViewController {
             }
         }
         
-        if let playing = viewModel.fetchTrackPlaying() {
+        if let playing = viewModel.player.fetchTrackPlaying() {
             titleLabel.text = playing.title
             userTitle.text = playing.userName
             favoriteButton.isSelected = viewModel.isLiked(with: Int(playing.id))
@@ -66,7 +66,7 @@ final class HomeViewController: BaseViewController {
             playButton.isSelected = false
         }
         
-        if let playing = viewModel.fetchTrackPlaying() {
+        if let playing = viewModel.player.fetchTrackPlaying() {
             titleLabel.text = playing.title
             userTitle.text = playing.userName
             favoriteButton.isSelected = viewModel.isLiked(with: Int(playing.id))
@@ -127,7 +127,7 @@ extension HomeViewController: UITableViewDelegate,
             
             self?.playButton.isSelected = true
             
-            self?.viewModel.playMusic(with: track)
+            self?.viewModel.player.playMusic(with: track)
         }
         return cell
     }

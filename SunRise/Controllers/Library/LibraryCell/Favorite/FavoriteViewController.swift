@@ -1,21 +1,13 @@
 import UIKit
 
-private enum LibraryConstraints{
-    static let heightForRowTableView: CGFloat = 160
-}
-
-enum Type: Int {
-    case createPlaylist = 0, favorite, playlist
-}
-
-final class LibraryViewController: BaseViewController {
+final class FavoriteViewController: BaseViewController {
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var playButton: UIButton!
     @IBOutlet weak private var favoriteButton: UIButton!
     @IBOutlet weak private var titleLabel: UILabel!
     @IBOutlet weak private var userTitle: UILabel!
     
-    private let viewModel = LibraryViewModel()
+    private let viewModel = FavoriteViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,12 +25,12 @@ final class LibraryViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(LibraryTableViewCell.nib, forCellReuseIdentifier: LibraryTableViewCell.reuseIdentifier)
+        tableView.register(FavoriteTableViewCell.nib, forCellReuseIdentifier: FavoriteTableViewCell.reuseIdentifier)
         
     }
     
     override func setupUI() {
-        self.navigationItem.title = "Library"
+        self.navigationItem.title = "Liked Songs"
         
         favoriteButton.image = UIImage(named: "ic-heart-white")
         favoriteButton.selectedImage = UIImage(named: "ic-heart-green")
@@ -83,46 +75,48 @@ final class LibraryViewController: BaseViewController {
         favoriteButton.isSelected.toggle()
         
         if favoriteButton.isSelected {
-            viewModel.saveFavorite()
+            viewModel.saveFavorite(id: viewModel.songPlayingID)
         } else {
-            viewModel.removeFavorite()
+            viewModel.removeFavorite(id: viewModel.songPlayingID)
         }
     }
 }
 
-extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
+extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        10
+        return viewModel.favorites.count
     }
     
     func tableView(_ tableView: UITableView,
                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.reuseIdentifier,
-                                                  for: indexPath) as? LibraryTableViewCell else { return LibraryTableViewCell() }
-        if let cellType = Type(rawValue: indexPath.row) {
-            cell.binding(type: cellType)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteTableViewCell.reuseIdentifier,
+                                                  for: indexPath) as? FavoriteTableViewCell else { return FavoriteTableViewCell() }
+        let item = viewModel.favorites[indexPath.row]
+        cell.binding(track: item)
+        
+        cell.favoriteButtonAction = { [weak self] in
+            self?.viewModel.removeFavorite(id: Int(item.id))
+            self?.updateData()
+            self?.updateUI()
         }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView,
-                didSelectRowAt indexPath: IndexPath) {
+                   didSelectRowAt indexPath: IndexPath) {
+        let item = viewModel.favorites[indexPath.row]
         
-        if let cellType = Type(rawValue: indexPath.row) {
-            switch cellType {
-            case .createPlaylist:
-                break
-            case .favorite:
-                let vc = FavoriteViewController()
-                self.navigationController?.pushViewController(vc, animated: true)
-            default:
-                break
-            }
-        }
+        titleLabel.text = item.title
+        userTitle.text = item.userName
+        favoriteButton.isSelected = viewModel.isLiked(with: Int(item.id))
+        playButton.isSelected = true
+        
+        viewModel.player.playMusic(with: item)
+
     }
     
-    func tableView(_ tableView: UITableView,
-                   heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return LibraryConstraints.heightForRowTableView
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
     }
 }
