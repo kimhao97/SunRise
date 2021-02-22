@@ -10,6 +10,7 @@ final class Player {
     
     static let shared = Player()
     private var audioPlayer = AVPlayer()
+    var songs = [String: [Track]]()
     
     var state: State = .stopped {
         didSet {
@@ -46,26 +47,15 @@ final class Player {
                 saveSongPlaying(with: track)
                 
                 NotificationCenter.default.addObserver(self,
-                                                selector: #selector(playerDidReachEnd),
-                                                name: Notification.Name.AVPlayerItemDidPlayToEndTime,
-                                                object: nil)
+                                                       selector: #selector(playerDidReachEnd),
+                                                       name: Notification.Name.AVPlayerItemDidPlayToEndTime,
+                                                       object: nil)
             }
         }
     }
     
-//        private func autoPlayMusic() -> String? {
-//            if let streamString = songs.randomElement()?.value.randomElement()?.streamURL {
-//                playMusic(with: )
-//                return streamString
-//            }
-//
-//            return nil
-//        }
-    
     @objc func playerDidReachEnd() {
         state = .stopped
-        
-//        autoPlayMusic()
     }
     
     private func streamUrlPlaying() -> String? {
@@ -75,7 +65,6 @@ final class Player {
 
             let endOfSentence = urlString.firstIndex(of: "?") ?? urlString.endIndex
             let streamString = urlString[..<endOfSentence]
-            print("Current url: \(streamString)")
             return String(describing: streamString)
         }
 
@@ -84,7 +73,7 @@ final class Player {
     
     // MARK: - CoreData
     
-    func fetchTrackPlaying() -> PlayingMO?{
+    func fetchTrackPlaying() -> PlayingManagedObject?{
         if let playing = CoreDataManager.Playing.fetchData()?.first {
             
             if streamUrlPlaying() == nil {
@@ -102,4 +91,21 @@ final class Player {
         CoreDataManager.Playing.save(with: track)
     }
     
+    func saveFavorite(id: Int?) {
+        for (_, tracks) in songs {
+            for track in tracks where track.trackID == id{
+                CoreDataManager.Favorite.save(with: track)
+                return
+            }
+        }
+    }
+    
+    func removeFavorite(id: Int?) {
+        for (_, tracks) in songs {
+            for track in tracks where track.trackID == id {
+                CoreDataManager.Favorite.remove(with: track.trackID ?? 0)
+                return
+            }
+        }
+    }
 }

@@ -1,19 +1,15 @@
-//
-//  FavoriteMO+CoreDataProperties.swift
-//  SunRise
-//
-//  Created by Hao Kim on 2/20/21.
-//
-//
-
 import Foundation
 import CoreData
 
+@objc(FavoriteManagedObject)
+public class FavoriteManagedObject: NSManagedObject {
 
-extension FavoriteMO {
+}
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<FavoriteMO> {
-        return NSFetchRequest<FavoriteMO>(entityName: "Favorite")
+extension FavoriteManagedObject {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<FavoriteManagedObject> {
+        return NSFetchRequest<FavoriteManagedObject>(entityName: "Favorite")
     }
 
     @NSManaged public var artwork_url: String?
@@ -26,6 +22,6 @@ extension FavoriteMO {
 
 }
 
-extension FavoriteMO : Identifiable {
+extension FavoriteManagedObject : Identifiable {
 
 }

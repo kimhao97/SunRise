@@ -6,7 +6,7 @@ extension CoreDataManager.Playing {
 
     static func save(with track: Track) {
         if let managedContext = CoreDataManager.appDelegate?.persistentContainer.viewContext {
-            let playingMO = PlayingMO(context: managedContext)
+            let playingMO = PlayingManagedObject(context: managedContext)
             
             playingMO.id = Int32(track.trackID ?? 0)
             playingMO.title = track.title
@@ -23,16 +23,13 @@ extension CoreDataManager.Playing {
         }
     }
     
-    static func fetchData() -> [PlayingMO]? {
+    static func fetchData() -> [PlayingManagedObject]? {
         if let managedContext = CoreDataManager.appDelegate?.persistentContainer.viewContext {
-            let request: NSFetchRequest<PlayingMO> = PlayingMO.fetchRequest()
+            let request: NSFetchRequest<PlayingManagedObject> = PlayingManagedObject.fetchRequest()
             request.returnsObjectsAsFaults = false
             
             do {
                 let result = try managedContext.fetch(request)
-                for data in result {
-                    print(data.title!)
-                }
                 return result
             } catch {
                 print("Fetch request failed")

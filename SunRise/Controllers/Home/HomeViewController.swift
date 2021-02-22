@@ -43,13 +43,7 @@ final class HomeViewController: BaseViewController {
         if let playing = viewModel.fetchTrackPlaying() {
             titleLabel.text = playing.title
             userTitle.text = playing.user_name
-            
-            if viewModel.isLiked(with: Int(playing.id)) {
-               favoriteButton.isSelected = true
-            } else {
-                favoriteButton.isSelected = false
-            }
-            
+            favoriteButton.isSelected = viewModel.isLiked(with: Int(playing.id))
         }
     }
     
@@ -75,13 +69,7 @@ final class HomeViewController: BaseViewController {
         if let playing = viewModel.fetchTrackPlaying() {
             titleLabel.text = playing.title
             userTitle.text = playing.user_name
-            
-            if viewModel.isLiked(with: Int(playing.id)) {
-               favoriteButton.isSelected = true
-            } else {
-                favoriteButton.isSelected = false
-            }
-            
+            favoriteButton.isSelected = viewModel.isLiked(with: Int(playing.id))
         }
     }
     
@@ -90,11 +78,7 @@ final class HomeViewController: BaseViewController {
     @IBAction func playPressed(sender: Any) {
         playButton.isSelected.toggle()
         
-        if playButton.isSelected {
-            Player.shared.state = .isPlaying
-        } else {
-            Player.shared.state = .stopped
-        }
+        viewModel.player.state = playButton.isSelected ? .isPlaying : .stopped
     }
     
     @IBAction func favoritePressed(sender: Any) {
@@ -138,12 +122,9 @@ extension HomeViewController: UITableViewDelegate,
             self?.userTitle.text = track.userName
             
             if let isLiked = self?.viewModel.isLiked(with: track.trackID ?? 0) {
-                if isLiked{
-                    self?.favoriteButton.isSelected = true
-                } else {
-                    self?.favoriteButton.isSelected = false
-                }
+                self?.favoriteButton.isSelected = isLiked
             }
+            
             self?.playButton.isSelected = true
             
             self?.viewModel.playMusic(with: track)

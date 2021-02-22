@@ -6,8 +6,14 @@ import CoreData
 final class HomeViewModel {
     
     private var playlists = [Playlist]()
-    private let player = Player.shared
-    var songs = [String: [Track]]()
+    let player = Player.shared
+    
+    var songs = [String: [Track]]() {
+        didSet {
+            player.songs = songs
+        }
+    }
+    
     var songPlayingID: Int?
     
     func loadAPI(completion: @escaping (Bool) -> Void) {
@@ -75,32 +81,18 @@ final class HomeViewModel {
     // MARK: - CoreData
     
     func saveFavorite() {
-        for (_, tracks) in songs {
-            for track in tracks {
-                if track.trackID == songPlayingID {
-                    CoreDataManager.Favorite.save(with: track)
-                    return
-                }
-            }
-        }
+        player.saveFavorite(id: songPlayingID)
     }
     
     func removeFavorite() {
-        for (_, tracks) in songs {
-            for track in tracks {
-                if track.trackID == songPlayingID {
-                    CoreDataManager.Favorite.remove(with: track.trackID ?? 0)
-                    return
-                }
-            }
-        }
+        player.removeFavorite(id: songPlayingID)
     }
     
     func isLiked(with id: Int) -> Bool {
         return CoreDataManager.Favorite.findItem(with: id)
     }
     
-    func fetchTrackPlaying() -> PlayingMO?{
+    func fetchTrackPlaying() -> PlayingManagedObject?{
         if let playing = player.fetchTrackPlaying() {
             songPlayingID = Int(playing.id)
             return playing

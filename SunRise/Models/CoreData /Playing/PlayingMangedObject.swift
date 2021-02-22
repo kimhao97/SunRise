@@ -1,11 +1,15 @@
 import Foundation
 import CoreData
 
+@objc(PlayingManagedObject)
+public class PlayingManagedObject: NSManagedObject {
 
-extension PlayingMO {
+}
 
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<PlayingMO> {
-        return NSFetchRequest<PlayingMO>(entityName: "Playing")
+extension PlayingManagedObject {
+
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<PlayingManagedObject> {
+        return NSFetchRequest<PlayingManagedObject>(entityName: "Playing")
     }
 
     @NSManaged public var artwork_url: String?
@@ -18,6 +22,6 @@ extension PlayingMO {
 
 }
 
-extension PlayingMO : Identifiable {
+extension PlayingManagedObject : Identifiable {
 
 }

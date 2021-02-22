@@ -6,7 +6,7 @@ extension CoreDataManager.Favorite {
     
     static func save<T>(with track: T) {
         if let managedContext = CoreDataManager.appDelegate?.persistentContainer.viewContext {
-            let favoriteMO = FavoriteMO(context: managedContext)
+            let favoriteMO = FavoriteManagedObject(context: managedContext)
             
             if let track = track as? Track {
                 favoriteMO.id = Int32(track.trackID ?? 0)
@@ -16,7 +16,7 @@ extension CoreDataManager.Favorite {
                 favoriteMO.stream_url = track.streamURL
                 favoriteMO.user_name = track.userName
             } else {
-                if let track = track as? FavoriteMO {
+                if let track = track as? FavoriteManagedObject {
                     favoriteMO.id = track.id
                     favoriteMO.title = track.title
                     favoriteMO.genre = track.genre
@@ -37,7 +37,7 @@ extension CoreDataManager.Favorite {
     static func remove(with id: Int) {
         if let managedContext = CoreDataManager.appDelegate?.persistentContainer.viewContext {
             
-            let request: NSFetchRequest<FavoriteMO> = FavoriteMO.fetchRequest()
+            let request: NSFetchRequest<FavoriteManagedObject> = FavoriteManagedObject.fetchRequest()
             
 //            if let id = track.trackID {
             request.predicate = NSPredicate(format: "id == \(id)")
@@ -55,9 +55,9 @@ extension CoreDataManager.Favorite {
         }
     }
     
-    static func fetchData() -> [FavoriteMO] {
+    static func fetchData() -> [FavoriteManagedObject] {
         if let managedContext = CoreDataManager.appDelegate?.persistentContainer.viewContext {
-            let request: NSFetchRequest<FavoriteMO> = FavoriteMO.fetchRequest()
+            let request: NSFetchRequest<FavoriteManagedObject> = FavoriteManagedObject.fetchRequest()
             request.returnsObjectsAsFaults = false
             
             do {
@@ -68,14 +68,14 @@ extension CoreDataManager.Favorite {
                 return result
             } catch {
                 print("Fetch request failed")
-                return [FavoriteMO]()
+                return [FavoriteManagedObject]()
             }
         }
-        return [FavoriteMO]()
+        return [FavoriteManagedObject]()
     }
     
     static func findItem(with id: Int) -> Bool {
-        let request: NSFetchRequest<FavoriteMO> = FavoriteMO.fetchRequest()
+        let request: NSFetchRequest<FavoriteManagedObject> = FavoriteManagedObject.fetchRequest()
 //        if let id = track.trackID {
             request.predicate = NSPredicate(format: "id == %i", id)
             request.sortDescriptors = [NSSortDescriptor(key: "id",

@@ -23,8 +23,7 @@
 		3327EF5925DF6EB700C74CF5 /* NibLoadable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF5825DF6EB700C74CF5 /* NibLoadable.swift */; };
 		3327EF6B25DFA84A00C74CF5 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3327EF6525DFA84A00C74CF5 /* Model.xcdatamodeld */; };
 		33441F4F25E0AAB700E07F3D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33441F4E25E0AAB700E07F3D /* UIButton+Extension.swift */; };
-		33441F8925E10E7A00E07F3D /* FavoriteMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33441F8725E10E7A00E07F3D /* FavoriteMO+CoreDataClass.swift */; };
-		33441F8A25E10E7A00E07F3D /* FavoriteMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33441F8825E10E7A00E07F3D /* FavoriteMO+CoreDataProperties.swift */; };
+		33441F8925E10E7A00E07F3D /* FavoriteManagedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33441F8725E10E7A00E07F3D /* FavoriteManagedObject.swift */; };
 		33502DF125CD4B9E00D20B10 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF025CD4B9E00D20B10 /* AppDelegate.swift */; };
 		33502DF325CD4B9E00D20B10 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */; };
 		33502DFA25CD4BA000D20B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33502DF925CD4BA000D20B10 /* Assets.xcassets */; };
@@ -43,8 +42,7 @@
 		33C4E6B425E33D5D00F2EBEF /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C4E6B125E33D5D00F2EBEF /* CoreDataManager.swift */; };
 		33C4E6B525E33D5D00F2EBEF /* CoreDataManager.Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C4E6B225E33D5D00F2EBEF /* CoreDataManager.Favorite.swift */; };
 		33C4E6B625E33D5D00F2EBEF /* CoreDataManager.Playing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33C4E6B325E33D5D00F2EBEF /* CoreDataManager.Playing.swift */; };
-		33DE19A125E2190E00234186 /* PlayingMO+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE199F25E2190E00234186 /* PlayingMO+CoreDataClass.swift */; };
-		33DE19A225E2190E00234186 /* PlayingMO+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE19A025E2190E00234186 /* PlayingMO+CoreDataProperties.swift */; };
+		33DE19A125E2190E00234186 /* PlayingMangedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33DE199F25E2190E00234186 /* PlayingMangedObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,8 +62,7 @@
 		3327EF5825DF6EB700C74CF5 /* NibLoadable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NibLoadable.swift; sourceTree = "<group>"; };
 		3327EF6625DFA84A00C74CF5 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		33441F4E25E0AAB700E07F3D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
-		33441F8725E10E7A00E07F3D /* FavoriteMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		33441F8825E10E7A00E07F3D /* FavoriteMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FavoriteMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33441F8725E10E7A00E07F3D /* FavoriteManagedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteManagedObject.swift; sourceTree = "<group>"; };
 		33502DED25CD4B9E00D20B10 /* SunRise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SunRise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33502DF025CD4B9E00D20B10 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33502DF225CD4B9E00D20B10 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -86,8 +83,7 @@
 		33C4E6B125E33D5D00F2EBEF /* CoreDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		33C4E6B225E33D5D00F2EBEF /* CoreDataManager.Favorite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.Favorite.swift; sourceTree = "<group>"; };
 		33C4E6B325E33D5D00F2EBEF /* CoreDataManager.Playing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataManager.Playing.swift; sourceTree = "<group>"; };
-		33DE199F25E2190E00234186 /* PlayingMO+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayingMO+CoreDataClass.swift"; sourceTree = "<group>"; };
-		33DE19A025E2190E00234186 /* PlayingMO+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlayingMO+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		33DE199F25E2190E00234186 /* PlayingMangedObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingMangedObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -308,8 +304,7 @@
 		33DE199225E20A3F00234186 /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
-				33441F8725E10E7A00E07F3D /* FavoriteMO+CoreDataClass.swift */,
-				33441F8825E10E7A00E07F3D /* FavoriteMO+CoreDataProperties.swift */,
+				33441F8725E10E7A00E07F3D /* FavoriteManagedObject.swift */,
 			);
 			path = Favorite;
 			sourceTree = "<group>";
@@ -317,8 +312,7 @@
 		33DE199825E2189500234186 /* Playing */ = {
 			isa = PBXGroup;
 			children = (
-				33DE199F25E2190E00234186 /* PlayingMO+CoreDataClass.swift */,
-				33DE19A025E2190E00234186 /* PlayingMO+CoreDataProperties.swift */,
+				33DE199F25E2190E00234186 /* PlayingMangedObject.swift */,
 			);
 			path = Playing;
 			sourceTree = "<group>";
@@ -407,9 +401,8 @@
 				33C4E6B625E33D5D00F2EBEF /* CoreDataManager.Playing.swift in Sources */,
 				33BAF00F25D0D4570073B31F /* BaseView Controller.swift in Sources */,
 				33502DF125CD4B9E00D20B10 /* AppDelegate.swift in Sources */,
-				33DE19A225E2190E00234186 /* PlayingMO+CoreDataProperties.swift in Sources */,
 				3327EF4625DF535000C74CF5 /* APIKey.swift in Sources */,
-				33DE19A125E2190E00234186 /* PlayingMO+CoreDataClass.swift in Sources */,
+				33DE19A125E2190E00234186 /* PlayingMangedObject.swift in Sources */,
 				3373A17325D0D9C00066AB54 /* LibraryViewController.swift in Sources */,
 				33441F4F25E0AAB700E07F3D /* UIButton+Extension.swift in Sources */,
 				3327EF4C25DF538900C74CF5 /* String+Extension.swift in Sources */,
@@ -423,11 +416,10 @@
 				3327EF5525DF6E6000C74CF5 /* Reusable.swift in Sources */,
 				3327EF4825DF535000C74CF5 /* API.swift in Sources */,
 				3327EF6B25DFA84A00C74CF5 /* Model.xcdatamodeld in Sources */,
-				33441F8A25E10E7A00E07F3D /* FavoriteMO+CoreDataProperties.swift in Sources */,
 				3327EF4725DF535000C74CF5 /* API.Manager.swift in Sources */,
 				33C4E6A525E33CBD00F2EBEF /* Player.swift in Sources */,
 				33C4E6B425E33D5D00F2EBEF /* CoreDataManager.swift in Sources */,
-				33441F8925E10E7A00E07F3D /* FavoriteMO+CoreDataClass.swift in Sources */,
+				33441F8925E10E7A00E07F3D /* FavoriteManagedObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
