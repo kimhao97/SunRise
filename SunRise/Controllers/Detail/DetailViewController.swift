@@ -28,9 +28,7 @@ final class DetailViewController: BaseViewController {
     // MARK: - Config
     
     override func setupUI() {
-        
         self.tabBarController?.tabBar.isHidden = true
-        
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-left-arrow-white"), style: .plain, target: self, action: #selector(popToLibraryViewController))
         self.navigationItem.leftBarButtonItem?.tintColor = .white
         
@@ -40,7 +38,7 @@ final class DetailViewController: BaseViewController {
         titleLabel.text = viewModel.getTitle()
         userLabel.text = viewModel.getUser()
         
-        viewModel.getSongImaage() { [weak self]result in
+        viewModel.getSongImage() { [weak self]result in
             switch result {
             case .failure(_):
                 break

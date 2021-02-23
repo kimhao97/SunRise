@@ -27,7 +27,7 @@ final class DetailViewModel {
         return "Invalid"
     }
     
-    func getSongImaage(completion: @escaping APICompletion<UIImage?>) {
+    func getSongImage(completion: @escaping APICompletion<UIImage?>) {
         if let track = favorite {
             track.artworkURL?.downloadImage(completion: completion)
         }

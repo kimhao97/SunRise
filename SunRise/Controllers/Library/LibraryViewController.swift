@@ -91,7 +91,8 @@ final class LibraryViewController: BaseViewController {
 }
 
 extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         10
     }
     
@@ -108,7 +109,7 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView,
-                didSelectRowAt indexPath: IndexPath) {
+                   didSelectRowAt indexPath: IndexPath) {
         
         if let cellType = Type(rawValue: indexPath.row) {
             switch cellType {

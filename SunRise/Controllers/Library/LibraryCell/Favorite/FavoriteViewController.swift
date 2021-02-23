@@ -30,7 +30,8 @@ final class FavoriteViewController: BaseViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        tableView.register(FavoriteTableViewCell.nib, forCellReuseIdentifier: FavoriteTableViewCell.reuseIdentifier)
+        tableView.register(FavoriteTableViewCell.nib,
+                           forCellReuseIdentifier: FavoriteTableViewCell.reuseIdentifier)
         
     }
     
@@ -103,7 +104,7 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView,
                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteTableViewCell.reuseIdentifier,
-                                                  for: indexPath) as? FavoriteTableViewCell else { return FavoriteTableViewCell() }
+                                                for: indexPath) as? FavoriteTableViewCell else { return FavoriteTableViewCell() }
         
         cell.selectionStyle = .none
         
