@@ -14,17 +14,11 @@ final class DetailViewModel {
     // MARK: - Public func
     
     func getTitle() -> String {
-        if let track = favorite {
-            return track.title ?? "Invalid"
-        }
-        return "Invalid"
+        return favorite?.title ?? "Invalid"
     }
     
     func getUser() -> String {
-        if let track = favorite {
-            return track.userName ?? "Invalid"
-        }
-        return "Invalid"
+        return favorite?.userName ?? "Invalid"
     }
     
     func getSongImage(completion: @escaping APICompletion<UIImage?>) {

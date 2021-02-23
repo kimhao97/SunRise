@@ -15,6 +15,7 @@ final class LibraryTableViewCell: UITableViewCell, Reusable, NibLoadable {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         songImage.image = .none
         playlistLabel.text = .none
         userNameLabel.text = .none

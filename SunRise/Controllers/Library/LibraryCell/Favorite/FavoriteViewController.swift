@@ -20,6 +20,7 @@ final class FavoriteViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         updateData()
         updateUI()
     }
@@ -29,7 +30,6 @@ final class FavoriteViewController: BaseViewController {
     override func setupData() {
         tableView.delegate = self
         tableView.dataSource = self
-        
         tableView.register(FavoriteTableViewCell.nib,
                            forCellReuseIdentifier: FavoriteTableViewCell.reuseIdentifier)
         
@@ -97,14 +97,15 @@ final class FavoriteViewController: BaseViewController {
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView,
+                   numberOfRowsInSection section: Int) -> Int {
         return viewModel.favorites.count
     }
     
     func tableView(_ tableView: UITableView,
                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteTableViewCell.reuseIdentifier,
-                                                for: indexPath) as? FavoriteTableViewCell else { return FavoriteTableViewCell() }
+                                                 for: indexPath) as? FavoriteTableViewCell else { return FavoriteTableViewCell() }
         
         cell.selectionStyle = .none
         
@@ -118,7 +119,8 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.isDetailButtonPressed = { [weak self] in
-            self?.navigationController?.pushViewController(DetailViewController(favorites: item), animated: true)
+            self?.navigationController?.pushViewController(DetailViewController(favorites: item),
+                                                  animated: true)
         }
         return cell
     }
@@ -136,7 +138,8 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
 
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
         return FavoriteConstraints.HeightForRowTableView
     }
 }

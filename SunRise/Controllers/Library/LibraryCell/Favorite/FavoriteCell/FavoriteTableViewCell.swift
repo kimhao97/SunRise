@@ -18,6 +18,7 @@ final class FavoriteTableViewCell: UITableViewCell, Reusable, NibLoadable {
     }
     
     override func prepareForReuse() {
+        super.prepareForReuse()
         songImage.image = .none
         titleLabel.text = .none
         userLabel.text = .none

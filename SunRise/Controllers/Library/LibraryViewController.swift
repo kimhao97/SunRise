@@ -23,6 +23,7 @@ final class LibraryViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         updateData()
         updateUI()
     }

@@ -22,6 +22,7 @@ final class HomeViewController: BaseViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         updateUI()
     }
     // MARK: - Config

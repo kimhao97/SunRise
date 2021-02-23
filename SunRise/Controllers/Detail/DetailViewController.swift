@@ -37,6 +37,7 @@ final class DetailViewController: BaseViewController {
         
         titleLabel.text = viewModel.getTitle()
         userLabel.text = viewModel.getUser()
+        favoriteButton.isSelected = viewModel.isLiked()
         
         viewModel.getSongImage() { [weak self]result in
             switch result {
@@ -48,9 +49,6 @@ final class DetailViewController: BaseViewController {
                 }
             }
         }
-        
-        favoriteButton.isSelected = viewModel.isLiked()
-        
     }
     
     @objc private func popToLibraryViewController() {
