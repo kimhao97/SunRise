@@ -38,7 +38,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9Z-FN-EzT">
-                        <rect key="frame" x="364" y="39" width="50" height="50"/>
+                        <rect key="frame" x="364" y="34" width="50" height="50"/>
                         <state key="normal" image="ic-dots-gray">
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                         </state>
@@ -66,7 +66,7 @@
                     <constraint firstAttribute="trailing" secondItem="n9Z-FN-EzT" secondAttribute="trailing" id="IFc-NI-AeV"/>
                     <constraint firstAttribute="trailing" secondItem="k0u-om-m3M" secondAttribute="trailing" id="Nlg-ti-OHB"/>
                     <constraint firstItem="bTW-uZ-86l" firstAttribute="leading" secondItem="u4W-P1-qAC" secondAttribute="trailing" constant="10" id="OhJ-wr-3va"/>
-                    <constraint firstItem="k0u-om-m3M" firstAttribute="top" secondItem="n9Z-FN-EzT" secondAttribute="bottom" constant="30" id="SiL-2V-k1b"/>
+                    <constraint firstItem="k0u-om-m3M" firstAttribute="top" secondItem="n9Z-FN-EzT" secondAttribute="bottom" constant="35" id="SiL-2V-k1b"/>
                     <constraint firstAttribute="bottom" secondItem="u4W-P1-qAC" secondAttribute="bottom" constant="39" id="ToX-el-s2D"/>
                     <constraint firstItem="n9Z-FN-EzT" firstAttribute="leading" secondItem="1P0-Wk-XZ4" secondAttribute="trailing" id="Yf6-h1-mP1"/>
                     <constraint firstItem="k0u-om-m3M" firstAttribute="top" secondItem="1P0-Wk-XZ4" secondAttribute="bottom" constant="40" id="ajx-1c-yQL"/>

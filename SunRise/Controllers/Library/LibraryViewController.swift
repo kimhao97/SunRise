@@ -99,6 +99,8 @@ extension LibraryViewController: UITableViewDelegate, UITableViewDataSource {
                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: LibraryTableViewCell.reuseIdentifier,
                                                   for: indexPath) as? LibraryTableViewCell else { return LibraryTableViewCell() }
+        cell.selectionStyle = .none
+        
         if let cellType = Type(rawValue: indexPath.row) {
             cell.binding(type: cellType)
         }

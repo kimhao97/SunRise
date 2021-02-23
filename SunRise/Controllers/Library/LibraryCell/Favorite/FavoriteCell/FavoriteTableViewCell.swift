@@ -7,7 +7,8 @@ final class FavoriteTableViewCell: UITableViewCell, Reusable, NibLoadable {
     @IBOutlet weak private var userLabel: UILabel!
     @IBOutlet weak private var favoriteButton: UIButton!
     
-    var favoriteButtonAction: ( () -> Void)?
+    var isFavoriteButtonPressed: (() -> Void)?
+    var isDetailButtonPressed: (() -> Void)?
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -26,11 +27,11 @@ final class FavoriteTableViewCell: UITableViewCell, Reusable, NibLoadable {
     // MARK: - Action
     
     @IBAction func detailPressed(sender: Any) {
-        
+        isDetailButtonPressed?()
     }
     
     @IBAction func favoritePressed(sender: Any) {
-        favoriteButtonAction?()
+        isFavoriteButtonPressed?()
     }
     
     // MARK: - Config

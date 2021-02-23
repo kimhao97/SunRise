@@ -1,6 +1,11 @@
 import UIKit
 
+private enum FavoriteConstraints {
+    static let HeightForRowTableView: CGFloat = 160
+}
+
 final class FavoriteViewController: BaseViewController {
+    
     @IBOutlet weak private var tableView: UITableView!
     @IBOutlet weak private var playButton: UIButton!
     @IBOutlet weak private var favoriteButton: UIButton!
@@ -32,11 +37,18 @@ final class FavoriteViewController: BaseViewController {
     override func setupUI() {
         self.navigationItem.title = "Liked Songs"
         
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic-left-arrow-white"), style: .plain, target: self, action: #selector(popToLibraryViewController))
+        self.navigationItem.leftBarButtonItem?.tintColor = .white
+        
         favoriteButton.image = UIImage(named: "ic-heart-white")
         favoriteButton.selectedImage = UIImage(named: "ic-heart-green")
         
         playButton.image = UIImage(systemName: "play.fill")
         playButton.selectedImage = UIImage(systemName: "pause.fill")
+    }
+    
+    @objc private func popToLibraryViewController() {
+        self.navigationController?.popViewController(animated: true)
     }
     
     // MARK: - Update
@@ -80,6 +92,7 @@ final class FavoriteViewController: BaseViewController {
             viewModel.removeFavorite(id: viewModel.songPlayingID)
         }
     }
+    
 }
 
 extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
@@ -91,15 +104,21 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
                 cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: FavoriteTableViewCell.reuseIdentifier,
                                                   for: indexPath) as? FavoriteTableViewCell else { return FavoriteTableViewCell() }
+        
+        cell.selectionStyle = .none
+        
         let item = viewModel.favorites[indexPath.row]
         cell.binding(track: item)
         
-        cell.favoriteButtonAction = { [weak self] in
+        cell.isFavoriteButtonPressed = { [weak self] in
             self?.viewModel.removeFavorite(id: Int(item.id))
             self?.updateData()
             self?.updateUI()
         }
         
+        cell.isDetailButtonPressed = { [weak self] in
+            self?.navigationController?.pushViewController(DetailViewController(favorites: item), animated: true)
+        }
         return cell
     }
     
@@ -117,6 +136,6 @@ extension FavoriteViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return FavoriteConstraints.HeightForRowTableView
     }
 }

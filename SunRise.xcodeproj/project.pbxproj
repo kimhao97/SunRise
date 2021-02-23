@@ -29,6 +29,9 @@
 		33502DFA25CD4BA000D20B10 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33502DF925CD4BA000D20B10 /* Assets.xcassets */; };
 		33502DFD25CD4BA000D20B10 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33502DFB25CD4BA000D20B10 /* LaunchScreen.storyboard */; };
 		339500EF25DCCAFB00D67646 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 339500EE25DCCAFB00D67646 /* Colors.xcassets */; };
+		3397BCAB25E48D3E00D377FD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3397BCA825E48D3E00D377FD /* DetailViewController.xib */; };
+		3397BCAC25E48D3E00D377FD /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397BCA925E48D3E00D377FD /* DetailViewModel.swift */; };
+		3397BCAD25E48D3E00D377FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3397BCAA25E48D3E00D377FD /* DetailViewController.swift */; };
 		33BAF00F25D0D4570073B31F /* BaseView Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAF00E25D0D4570073B31F /* BaseView Controller.swift */; };
 		33BAF01D25D0D4A60073B31F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BAF01B25D0D4A60073B31F /* SearchViewController.swift */; };
 		33BAF01E25D0D4A60073B31F /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33BAF01C25D0D4A60073B31F /* SearchViewController.xib */; };
@@ -78,6 +81,9 @@
 		33502DFC25CD4BA000D20B10 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		33502DFE25CD4BA000D20B10 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		339500EE25DCCAFB00D67646 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		3397BCA825E48D3E00D377FD /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		3397BCA925E48D3E00D377FD /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		3397BCAA25E48D3E00D377FD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		33BAF00E25D0D4570073B31F /* BaseView Controller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BaseView Controller.swift"; sourceTree = "<group>"; };
 		33BAF01B25D0D4A60073B31F /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		33BAF01C25D0D4A60073B31F /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 		335F461225CFEF30007D1BC8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				3397BCA725E48C9D00D377FD /* Detail */,
 				33C4E6A325E33CA400F2EBEF /* Core */,
 				33BAF00D25D0D43F0073B31F /* Base */,
 				335F461525CFEF4C007D1BC8 /* Home */,
@@ -251,6 +258,16 @@
 				33C4E6A825E33CF200F2EBEF /* HomeViewModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		3397BCA725E48C9D00D377FD /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				3397BCAA25E48D3E00D377FD /* DetailViewController.swift */,
+				3397BCA825E48D3E00D377FD /* DetailViewController.xib */,
+				3397BCA925E48D3E00D377FD /* DetailViewModel.swift */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		33BAF00B25D0D4030073B31F /* Search */ = {
@@ -437,6 +454,7 @@
 				339500EF25DCCAFB00D67646 /* Colors.xcassets in Resources */,
 				33BAF01E25D0D4A60073B31F /* SearchViewController.xib in Resources */,
 				33C4E6E325E3A2D300F2EBEF /* FavoriteTableViewCell.xib in Resources */,
+				3397BCAB25E48D3E00D377FD /* DetailViewController.xib in Resources */,
 				3327EF3325DF533200C74CF5 /* SongCollectionViewCell.xib in Resources */,
 				33C4E6E225E3A2D300F2EBEF /* LibraryViewController.xib in Resources */,
 				33C4E6E725E3A2D300F2EBEF /* FavoriteViewController.xib in Resources */,
@@ -468,6 +486,7 @@
 				33C4E6AB25E33CF200F2EBEF /* HomeViewModel.swift in Sources */,
 				3327EF4925DF535000C74CF5 /* API.Music.swift in Sources */,
 				3327EF5925DF6EB700C74CF5 /* NibLoadable.swift in Sources */,
+				3397BCAC25E48D3E00D377FD /* DetailViewModel.swift in Sources */,
 				3327EF3025DF533200C74CF5 /* GenreTableViewCell.swift in Sources */,
 				33C4E6E025E3A2D300F2EBEF /* LibraryViewController.swift in Sources */,
 				33C4E6E425E3A2D300F2EBEF /* FavoriteTableViewCell.swift in Sources */,
@@ -477,6 +496,7 @@
 				33C4E6E525E3A2D300F2EBEF /* FavoriteViewController.swift in Sources */,
 				3327EF4825DF535000C74CF5 /* API.swift in Sources */,
 				3327EF6B25DFA84A00C74CF5 /* Model.xcdatamodeld in Sources */,
+				3397BCAD25E48D3E00D377FD /* DetailViewController.swift in Sources */,
 				3327EF4725DF535000C74CF5 /* API.Manager.swift in Sources */,
 				33C4E6A525E33CBD00F2EBEF /* Player.swift in Sources */,
 				33C4E6E125E3A2D300F2EBEF /* LibraryViewModel.swift in Sources */,
