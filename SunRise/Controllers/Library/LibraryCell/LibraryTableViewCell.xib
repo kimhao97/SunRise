@@ -22,8 +22,8 @@
                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="100" scale="small" weight="light"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTQ-dz-8Hd">
-                        <rect key="frame" x="130" y="0.0" width="284" height="85"/>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                        <rect key="frame" x="130" y="25" width="284" height="60"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="35"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -44,7 +44,7 @@
                     <constraint firstAttribute="trailing" secondItem="u4W-P1-qAC" secondAttribute="trailing" constant="294" id="6Mi-Cv-dES"/>
                     <constraint firstAttribute="bottom" secondItem="KTQ-dz-8Hd" secondAttribute="bottom" constant="75" id="Dc3-cO-pnh"/>
                     <constraint firstItem="u4W-P1-qAC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="E32-gH-dhG"/>
-                    <constraint firstItem="KTQ-dz-8Hd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="HDk-zg-nVX"/>
+                    <constraint firstItem="KTQ-dz-8Hd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="HDk-zg-nVX"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bTW-uZ-86l" secondAttribute="trailing" id="Hfe-UK-nSv"/>
                     <constraint firstAttribute="trailing" secondItem="k0u-om-m3M" secondAttribute="trailing" id="Nlg-ti-OHB"/>
                     <constraint firstItem="bTW-uZ-86l" firstAttribute="leading" secondItem="u4W-P1-qAC" secondAttribute="trailing" constant="10" id="OhJ-wr-3va"/>

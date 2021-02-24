@@ -51,24 +51,10 @@ final class DetailViewModel {
     }
     
     func addSongToPlaylist() {
-//        CoreDataManager.Playlist.save(to: "ABC", with: favorite)
+
     }
     
     func removeSongFromPlaylist() {
         
-//        if let tracks = getTracksFromPlaylist(playlists: playlists, name: "ABC") {
-//            for track in tracks {
-//                print("Track Title: \(track.title)")
-//            }
-//        }
-        
-//        CoreDataManager.Playlist.removeTrackFromPlaylist(trackID: Int(favorite?.id ?? 0) , from: "ABC")
     }
-    
-//    func getTracksFromPlaylist(playlists: [PlaylistMangedObject], name: String) -> [TrackManagedObject]?{
-//        for playlist in playlists where playlist.name == name{
-//            return playlist.tracks?.allObjects as? [TrackManagedObject]
-//        }
-//        return nil
-//    }
 }
