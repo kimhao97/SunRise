@@ -105,8 +105,4 @@ iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,xcode
 
-/SunRise
-/SunRise/Models
-/SunRise/Models/API
-/SunRise/Models/API/Networking
-/SunRise/Models/API/Networking/APIKey.swift
+SunRise/Models/API/Networking/APIKey.swift
