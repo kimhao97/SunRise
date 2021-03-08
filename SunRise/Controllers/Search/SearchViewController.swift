@@ -1,6 +1,6 @@
 import UIKit
 import NotificationCenter
-// RxSwift RxSwift
+
 private enum SearchConstraints{
     static let heightForRowResultSearchTableView: CGFloat = 160
     static let heightForRowHistoryTableView: CGFloat = 45
